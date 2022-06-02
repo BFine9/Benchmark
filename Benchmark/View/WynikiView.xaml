@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="Benchmark.View.WynikiView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Benchmark.View"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="LightSteelBlue">
+        <Grid Visibility="{Binding Visibility1}">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10">
+                <materialDesign:PackIcon Foreground="#FF1364BE" Kind="ViewDashboard" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                <Label VerticalAlignment="Center">Tutaj pojawią się wnioski na temat tego jak dane bazy danych spisały się w teście</Label>
+                <Separator/>
+            </StackPanel>
+            <ListView Foreground="#FF1364BE" ScrollViewer.HorizontalScrollBarVisibility="Visible" Margin="0,50" ItemsSource="{Binding ListaWnioskow}">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Height" Value="60"/>
+                        <Setter Property="Margin" Value="0,10,0,0"/>
+                        <Setter Property="FontSize" Value="20"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Label" Width="20" Height="20" Margin="10" VerticalAlignment="Center"/>
+                            <Label Content="{Binding}" VerticalAlignment="Center" FontSize="15" Margin="0,10"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+        <Grid Visibility="{Binding Visibility2}" Background="LightSteelBlue">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10">
+                <materialDesign:PackIcon Foreground="#FF1364BE" Kind="ViewDashboard" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                <Label VerticalAlignment="Center">Wykonaj test baz danych żeby zobaczyć podsumowanie</Label>
+                <Separator/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

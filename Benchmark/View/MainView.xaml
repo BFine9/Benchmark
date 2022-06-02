@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Benchmark.View.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Benchmark.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="LightSteelBlue">
+        <Image Source="../Image/dgraph.png" Margin="403,164,139,46"/>
+        <Image Source="../Image/neo4j.png" Margin="54,217,483,70"/>
+        <Image Source="../Image/arangodb.png" RenderTransformOrigin="1.195,-1.356" Margin="403,-26,139,261"/>
+        <Image Source="../Image/orient.png" Margin="77,10,530,286"/>
+    </Grid>
+</UserControl>
